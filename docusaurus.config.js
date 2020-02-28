@@ -16,7 +16,7 @@ module.exports = {
       links: [
         { to: "docs/welcome", label: "Docs", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/futureswap/docs",
           label: "GitHub",
           position: "right"
         }
@@ -60,7 +60,7 @@ module.exports = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus"
+              href: "https://github.com/futureswap/docs"
             },
             {
               label: "Twitter",
