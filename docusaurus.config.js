@@ -4,8 +4,8 @@ module.exports = {
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "Futureswap", // Usually your GitHub org/user name.
+  projectName: "docs", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "Futureswap",
@@ -82,7 +82,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/facebook/docusaurus/edit/master/website/"
+          editUrl: "https://github.com/futureswap/docs/edit/master/"
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css")
