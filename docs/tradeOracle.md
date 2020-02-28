@@ -1,6 +1,6 @@
 ---
 id: trade-oracle
-title: Trading oracle
+title: Trading Oracle
 sidebar_label: Oracle
 ---
 
