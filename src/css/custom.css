@@ -35,3 +35,39 @@ html[data-theme="dark"] .hero.hero--primary {
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
+
+.menu > .menu__list > .menu__list-item {
+  margin-top: 20px;
+}
+
+.menu > .menu__list > .menu__list-item > .menu__link {
+  cursor: default;
+  color: rgb(157, 170, 182) !important;
+  text-transform: uppercase;
+}
+
+.menu > .menu__list > .menu__list-item > .menu__link:hover {
+  background: none;
+}
+
+.docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
+  background: #fafafa;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+html[data-theme="dark"]
+  .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
+  background: inherit;
+}
+
+/* Sidebar should go all the way to the footre on desktop. Previously there was a ~30px gap */
+@media (min-width: 997px) {
+  .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
+    margin-bottom: calc(-1 * var(--ifm-navbar-height));
+  }
+}
+
+/* Remove added styling on scrollbar track. Previously there was a full height background */
+.sidebar_node_modules-\@docusaurus-theme-classic-src-theme-DocSidebar-::-webkit-scrollbar-track {
+  background: none !important;
+}

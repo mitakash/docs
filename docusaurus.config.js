@@ -26,7 +26,8 @@ module.exports = {
     prism: {
       theme: require("prism-react-renderer/themes/nightOwl"),
       darkTheme: require("prism-react-renderer/themes/nightOwl")
-    }
+    },
+    sidebarCollapsible: false
   },
   presets: [
     [
