@@ -22,55 +22,6 @@ module.exports = {
         }
       ]
     },
-    footer: {
-      style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Style Guide",
-              to: "docs/welcome"
-            },
-            {
-              label: "Second Doc",
-              to: "docs/doc2"
-            }
-          ]
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus"
-            }
-          ]
-        },
-        {
-          title: "Social",
-          items: [
-            {
-              label: "Blog",
-              to: "blog"
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/futureswap/docs"
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus"
-            }
-          ]
-        }
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
-    },
     prism: {
       theme: require("prism-react-renderer/themes/nightOwl"),
       darkTheme: require("prism-react-renderer/themes/nightOwl")
