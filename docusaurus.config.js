@@ -11,10 +11,11 @@ module.exports = {
       title: "Futureswap",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo-green.svg"
+        src: "img/logo-green.svg",
+        href: "http://futureswap.com"
       },
       links: [
-        { to: "docs/welcome", label: "Docs", position: "left" },
+        { to: "/welcome", label: "Docs", position: "left" },
         {
           href: "https://github.com/futureswap/docs",
           label: "GitHub",
@@ -32,6 +33,8 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          path: "docs",
+          routeBasePath: "",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/futureswap/docs/edit/master/"
         },
