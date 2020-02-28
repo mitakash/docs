@@ -51,11 +51,15 @@ html[data-theme="dark"] .hero.hero--primary {
 }
 
 .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
-  margin-bottom: calc(-1 * var(--ifm-navbar-height));
   background: #fafafa;
   border-right: 1px solid rgba(0, 0, 0, 0.07);
 }
 
+@media (min-width: 997px) {
+  .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
+    margin-bottom: calc(-1 * var(--ifm-navbar-height));
+  }
+}
 html[data-theme="dark"]
   .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
   background: inherit;
