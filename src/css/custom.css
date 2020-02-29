@@ -40,14 +40,15 @@ html[data-theme="dark"] .hero.hero--primary {
   margin-top: 20px;
 }
 
-.menu > .menu__list > .menu__list-item > .menu__link {
+/* disables styling on categories*/
+.menu__link[href^="#!"] {
   cursor: default;
   color: rgb(157, 170, 182) !important;
   text-transform: uppercase;
 }
-
-.menu > .menu__list > .menu__list-item > .menu__link:hover {
+.menu__link[href^="#!"]:hover {
   background: none;
+  pointer-events: none;
 }
 
 .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
@@ -66,8 +67,20 @@ html[data-theme="dark"]
     margin-bottom: calc(-1 * var(--ifm-navbar-height));
   }
 }
+@media (min-width: 1440px) {
+  .docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
+    padding-left: calc((100% - 1448px) / 2);
+    width: calc(300px + ((100% - 1448px) / 2)) !important;
+  }
+}
 
 /* Remove added styling on scrollbar track. Previously there was a full height background */
 .sidebar_node_modules-\@docusaurus-theme-classic-src-theme-DocSidebar-::-webkit-scrollbar-track {
   background: none !important;
+}
+
+.navbar__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
