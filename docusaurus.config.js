@@ -8,17 +8,21 @@ module.exports = {
   projectName: "docs", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "Futureswap",
+      title: "Futureswap Docs",
       logo: {
         alt: "My Site Logo",
         src: "img/logo-green.svg",
-        href: "http://futureswap.com"
+        href: "/welcome"
       },
       links: [
-        { to: "/welcome", label: "Docs", position: "left" },
         {
-          href: "https://github.com/futureswap/docs",
-          label: "GitHub",
+          to: "http://futureswap.com",
+          label: "Home",
+          position: "right"
+        },
+        {
+          to: "https://discord.gg/dH4X89F",
+          label: "Community",
           position: "right"
         }
       ]
