@@ -4,21 +4,14 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
-html[data-theme="dark"] {
-  --ifm-background-color: #1d2330;
-  --ifm-hero-background-color: pink !important;
-
-  --ifm-navbar-background-color: #13161f;
-}
-
-* {
-  font-family: 'Ubuntu'
-}
-
 .navbar__brand {
   margin-right: 20px;
 }
+
+.navbar .navbar__logo{
+  margin-right: 20px;
+}
+
 html[data-theme="dark"] .hero.hero--primary {
   --ifm-hero-background-color: #1d2330;
 }
@@ -33,6 +26,7 @@ html[data-theme="dark"] .hero.hero--primary {
   --ifm-code-font-size: 90%;
   --ifm-color-content: var(--ifm-color-emphasis-800);
   --ifm-font-size-base: 16px;
+  --ifm-font-family-base: 'Ubuntu', system-ui, -apple-system, Segoe UI, Roboto, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 html[data-theme="dark"] {
@@ -56,12 +50,11 @@ html[data-theme="dark"] {
   padding: 0 var(--ifm-pre-padding);
 }
 
-.menu > .menu__list > .menu__list-item {
-  margin-top: 20px;
-}
+
 
 .menu .menu__list .menu__list .menu__link {
   margin-left: -16px;
+  font-size: 15px;
 }
 
 
