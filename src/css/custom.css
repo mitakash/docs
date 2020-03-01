@@ -4,13 +4,7 @@
  * work well for content-centric websites.
  */
 
-.navbar__brand {
-  margin-right: 20px;
-}
 
-.navbar .navbar__logo{
-  margin-right: 20px;
-}
 
 html[data-theme="dark"] .hero.hero--primary {
   --ifm-hero-background-color: #1d2330;
@@ -122,3 +116,17 @@ html[data-theme="dark"]
   margin: 0 auto;
   padding: 0 16px;
 }
+
+/* futureswap nav logo type */
+.navbar .navbar__brand strong {
+  font-size: 20px;
+  font-weight: 500;
+  }
+
+  .navbar__brand {
+    margin-right: 20px;
+  }
+  
+  .navbar .navbar__logo{
+    margin-right: 20px;
+  }

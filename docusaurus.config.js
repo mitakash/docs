@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Futureswap Docs",
+  title: "Futureswap",
   tagline: "",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
@@ -8,7 +8,7 @@ module.exports = {
   projectName: "docs", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "Futureswap Docs",
+      title: "Futureswap",
       logo: {
         alt: "My Site Logo",
         src: "img/logo-green.svg",
