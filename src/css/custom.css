@@ -64,6 +64,8 @@ html[data-theme="dark"] {
   color: rgb(157, 170, 182) !important;
   text-transform: uppercase;
   margin-top: 20px;
+  font-size:15px;
+  letter-spacing:.9px
 }
 .menu__link[href^="#!"]:hover {
   background: none;
