@@ -12,6 +12,10 @@ html[data-theme="dark"] {
   --ifm-navbar-background-color: #13161f;
 }
 
+* {
+  font-family: 'Ubuntu'
+}
+
 .navbar__brand {
   margin-right: 20px;
 }
@@ -39,6 +43,11 @@ html[data-theme="dark"] .hero.hero--primary {
 .menu > .menu__list > .menu__list-item {
   margin-top: 20px;
 }
+
+.menu .menu__list .menu__list .menu__link {
+  margin-left: -16px;
+}
+
 
 /* disables styling on categories*/
 .menu__link[href^="#!"] {

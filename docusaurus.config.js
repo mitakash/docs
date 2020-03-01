@@ -33,6 +33,14 @@ module.exports = {
     },
     sidebarCollapsible: false
   },
+  stylesheets: [    
+    'https://v2.docusaurus.io/docs/docusaurus.config.js/#stylesheets',
+    
+     {
+      href: "https://fonts.googleapis.com/css?family=Ubuntu&display=swap",
+      type: 'text/css',
+    },
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
