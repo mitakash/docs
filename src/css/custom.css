@@ -4,7 +4,11 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+
+
+html[data-theme="dark"] .hero.hero--primary {
+  --ifm-hero-background-color: #1d2330;
+}
 :root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -16,6 +20,7 @@
   --ifm-code-font-size: 90%;
   --ifm-color-content: var(--ifm-color-emphasis-800);
   --ifm-font-size-base: 16px;
+  --ifm-font-family-base: 'Ubuntu', system-ui, -apple-system, Segoe UI, Roboto, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 html[data-theme="dark"] {
@@ -39,12 +44,22 @@ html[data-theme="dark"] {
   padding: 0 var(--ifm-pre-padding);
 }
 
+
+
+.menu .menu__list .menu__list .menu__link {
+  margin-left: -16px;
+  font-size: 15px;
+}
+
+
 /* disables styling on categories*/
 .menu__link[href^="#!"] {
   cursor: default;
   color: rgb(157, 170, 182) !important;
   text-transform: uppercase;
   margin-top: 20px;
+  font-size:15px;
+  letter-spacing:.9px
 }
 .menu__link[href^="#!"]:hover {
   background: none;
@@ -101,3 +116,17 @@ html[data-theme="dark"]
   margin: 0 auto;
   padding: 0 16px;
 }
+
+/* futureswap nav logo type */
+.navbar .navbar__brand strong {
+  font-size: 20px;
+  font-weight: 500;
+  }
+
+  .navbar__brand {
+    margin-right: 20px;
+  }
+  
+  .navbar .navbar__logo{
+    margin-right: 20px;
+  }
