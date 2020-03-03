@@ -8,20 +8,21 @@
 module.exports = {
   someSidebar: {
     "Getting Started": [
+      "example",
       "welcome",
       "howItWorks",
       "privacyAndDecentralization",
       "supportedTokens",
       "deployedContracts"
     ],
-    Trading: [
+    'Trader': [
       "trade-overview",
       "trade-events",
       "trade-oracle",
       "trade-user-tutorial",
       "trade-bot-tutorial"
     ],
-    "Liquidity Pools": [
+    "Liquidity Provider": [
       "liquidity-provider-overview",
       "liquidity-provider-events",
       "liquidity-provider-user-tutorial"
