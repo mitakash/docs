@@ -1,0 +1,65 @@
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.docPage {
+  display: flex;
+}
+
+.docSidebarContainer {
+  border-right: 1px solid var(--ifm-contents-border-color);
+  box-sizing: border-box;
+  width: 300px;
+  position: relative;
+  top: calc(-1 * var(--ifm-navbar-height));
+}
+
+.docMainContainer {
+  flex-grow: 1;
+}
+
+@media (max-width: 996px) {
+  .docPage {
+    display: inherit;
+  }
+}
+
+.docSidebarContainer {
+  background: #fafafa;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+html[data-theme="dark"] .docSidebarContainer {
+  background: inherit;
+}
+
+/* Sidebar should go all the way to the footer on desktop. Previously there was a ~30px gap */
+@media (min-width: 997px) {
+  .docSidebarContainer {
+    margin-bottom: calc(-1 * var(--ifm-navbar-height));
+  }
+}
+
+/* effect where sidebar background continues all the way to left*/
+@media (min-width: 1440px) {
+  .docSidebarContainer {
+    padding-left: calc((100% - 1448px) / 2);
+    width: calc(300px + ((100% - 1448px) / 2)) !important;
+  }
+}
+
+.docSidebarContainer > *::-webkit-scrollbar-track {
+  /* remove background on scrollbar */
+  background: none !important;
+}
+.docSidebarContainer > *::-webkit-scrollbar {
+  width: 5px !important;
+  display: none;
+}
+.docSidebarContainer:hover > *::-webkit-scrollbar {
+  /* display sidebar scrollbar only on scroll*/
+  display: block;
+}
