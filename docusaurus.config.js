@@ -33,11 +33,12 @@ module.exports = {
     },
     sidebarCollapsible: false
   },
-  stylesheets: [    
-         {
-      href: "https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700&display=swap",
-      type: 'text/css',
-    },
+  stylesheets: [
+    {
+      href:
+        "https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700&display=swap",
+      type: "text/css"
+    }
   ],
   presets: [
     [
