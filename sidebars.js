@@ -17,8 +17,7 @@ module.exports = {
     ],
     'Trader': [
       "trade-overview",
-      "trade-events",
-      "trade-oracle",
+      "trade-methods",      
       "trade-user-tutorial",
       "trade-bot-tutorial"
     ],
@@ -55,6 +54,6 @@ module.exports = {
       "trading",
       "voting"
     ],
-    Features: ["mdx", "doc1", "doc2"]
+    // Features: ["mdx", "doc1", "doc2"]
   }
 }
