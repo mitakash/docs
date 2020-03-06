@@ -8,7 +8,7 @@
 module.exports = {
   someSidebar: {
     "Getting Started": [
-      "example",
+      // "example",
       "welcome",
       "howItWorks",
       "privacyAndDecentralization",
