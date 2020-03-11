@@ -66,7 +66,7 @@ Here is an example of how the system would work for a trader going long on ETH. 
 
 Alice enters a position of 10 DAI and selects 10x leverage to go long on 1 ETH.
 
- <p><img width='200' height='auto' src="img/trade_setup.png" title="*"/></p>
+ <p><img width='200' height='auto' src="/img/trade_setup.png" title="*"/></p>
 
 The contract takes 1 ETH out of the liquidity pool and marks it as reserved for Alice. At this point, Alice has added 10 DAI as collateral and has a position size of 1 ETH.
 
@@ -78,7 +78,7 @@ The contract takes 1 ETH out of the liquidity pool and marks it as reserved for 
 1. The ETH pool still has the same value of ETH and has made fees off of the trade.
 1. Price increase while long on ETH.
 
-![alt text](img/eth_go_up.png "eth_go_up")
+![alt text](/img/eth_go_up.png "eth_go_up")
 
 #### ETH goes Down 📉
 
@@ -89,4 +89,4 @@ The contract takes 1 ETH out of the liquidity pool and marks it as reserved for 
 1. The ETH pool still has the same value of ETH and has made fees off of the trade.
 1. Price decrease while long on ETH.
 
-![alt text](img/eth_go_down.png "eth_go_down")
+![alt text](/img/eth_go_down.png "eth_go_down")
