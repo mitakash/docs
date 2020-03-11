@@ -6,23 +6,23 @@ sidebar_label: Overview
 
 ---
 
-### Positions  
+### Positions
 
-Trades work by allowing users to borrow the tokens of liquidity providers. For each pair, there is an Asset and a Stable token. 
+Trades work by allowing users to borrow the tokens of liquidity providers. For each pair, there is an Asset and a Stable token.
 
-Let’s use the example of ETH/DAI pair. The trader selects LONG for their position, which means the user is borrowing the ETH (asset). If the user selects SHORT this means they are borrowing DAI (stable). 
+Let’s use the example of ETH/DAI pair. The trader selects LONG for their position, which means the user is borrowing the ETH (asset). If the user selects SHORT this means they are borrowing DAI (stable).
 
-The selected leverage amount determines at which multiple to borrow from the liquidity providers based on the collateral the trader put in. 
+The selected leverage amount determines at which multiple to borrow from the liquidity providers based on the collateral the trader put in.
 
 When closing a position, traders are releasing their exposure back to the liquidity provider of a given pair.
 
 :::important
-With Futureswap you can never lose more than the collateral you put in 
+With Futureswap you can never lose more than the collateral you put in
 :::
 
-### Pairs 
+### Pairs
 
-Futureswap was designed to add pairs quickly. Inspired by Uniswap’s permissionless design, our system is based on AMM, which gives us the flexibility to serve markets with low to high volume. Futureswap adds a layer of governance to the process by checking the validity of the oracle of a pair that is being proposed. 
+Futureswap was designed to add pairs quickly. Inspired by Uniswap’s permissionless design, our system is based on AMM, which gives us the flexibility to serve markets with low to high volume. Futureswap adds a layer of governance to the process by checking the validity of the oracle of a pair that is being proposed.
 
 ### AMM
 
@@ -36,17 +36,15 @@ All trades and liquidity pools use chainlink as our main oracle system. When a n
 
 The system protects users from front running attacks by checking the position creation timestamp relative to the chainlink price update. If the position is opened within a window of 2 minutes before the price update, the system bumps the user up to the next price on trade close.
 
-
 ### FST Reward
 
-FST is our system token used to vote and reduce trade fees. Every week the same amount of FSTs are given out (61,000) to traders who were active for that week. The amount of tokens given to users is determined by the cumaltive size of the user's trades for that week proportional to the rest of the trader volume for that week. So if Alice's trade volume was 10% of that week, she would claim 10% of that week's token allocation. To receive FST the user will need to navigate to the rewards section of our site or directly interface with the smart contract (Incentives.sol). 
+FST is our system token used to vote and reduce trade fees. Every week the same amount of FSTs are given out (61,000) to traders who were active for that week. The amount of tokens given to users is determined by the cumaltive size of the user's trades for that week proportional to the rest of the trader volume for that week. So if Alice's trade volume was 10% of that week, she would claim 10% of that week's token allocation. To receive FST the user will need to navigate to the rewards section of our site or directly interface with the smart contract (Incentives.sol).
 
-FST is a non-transferable token. Whatever address a trader uses to trade with will be the address that can claim the FST for those trades. 
+FST is a non-transferable token. Whatever address a trader uses to trade with will be the address that can claim the FST for those trades.
 
 FSTs are not burnt to reduce trade fees. The system checks to see how many FST an account has and then applies the discount to the trade fee. The discount is calculated on a logarithmic curve and reduces trade fees by up to 30%.
 
 FST is also used for voting on proposals for the system. Creating a new proposal does burn FST.
-
 
 ### Dynamic Funding Rate
 
@@ -62,36 +60,33 @@ Since the large trade of 50% of the long pool occurred at once, the fee as expec
 
 The way this fee scales is adjustable. We anticipate that our initial estimation for the funding fee’s scaling ratio to be incorrect, and as such, it can be adjusted via governance mechanisms.
 
-
-
 ### Trade Example
-Here is an example of how the system would work for a trader going long on ETH. Let’s assume 1 ETH = 100 DAI and 1 DAI = $1.
 
-Alice enters a position of 10 DAI and selects 10x leverage to go long on 1 ETH. 
+Here is an example of how the system would work for a trader going long on ETH. Let’s assume 1 ETH = 100 DAI and 1 DAI = \$1.
 
- <p><img width='200' height='auto' src="../static/img/trade_setup.png" title="*"/></p>
+Alice enters a position of 10 DAI and selects 10x leverage to go long on 1 ETH.
 
+ <p><img width='200' height='auto' src="img/trade_setup.png" title="*"/></p>
 
 The contract takes 1 ETH out of the liquidity pool and marks it as reserved for Alice. At this point, Alice has added 10 DAI as collateral and has a position size of 1 ETH.
 
 #### ETH goes up 📈
 
-1. Alice closes her long position at $105.
-1. $100 worth of ETH (0.95238 ETH) is returned to the liquidity pool.
-1. $5 worth of ETH (0.0476 ETH) is paid out to Alice as her profit along with her initial 10 DAI of collateral.
+1. Alice closes her long position at \$105.
+1. \$100 worth of ETH (0.95238 ETH) is returned to the liquidity pool.
+1. \$5 worth of ETH (0.0476 ETH) is paid out to Alice as her profit along with her initial 10 DAI of collateral.
 1. The ETH pool still has the same value of ETH and has made fees off of the trade.
 1. Price increase while long on ETH.
 
-![alt text](../static/img/eth_go_up.png "eth_go_up")
+![alt text](img/eth_go_up.png "eth_go_up")
 
 #### ETH goes Down 📉
 
-1. Alice closes her long position at $95.
-1. $95 worth of ETH (1 ETH) is returned to the liquidity pool.
-1. $5 worth of Alice’s collateral is converted to ETH to pay back the liquidity pool for her loss via a Uniswap-like pool.
-1. Alice’s remaining $5 in collateral is sent back to her.
+1. Alice closes her long position at \$95.
+1. \$95 worth of ETH (1 ETH) is returned to the liquidity pool.
+1. \$5 worth of Alice’s collateral is converted to ETH to pay back the liquidity pool for her loss via a Uniswap-like pool.
+1. Alice’s remaining \$5 in collateral is sent back to her.
 1. The ETH pool still has the same value of ETH and has made fees off of the trade.
 1. Price decrease while long on ETH.
 
-![alt text](../static/img/eth_go_down.png "eth_go_down")
-
+![alt text](img/eth_go_down.png "eth_go_down")
