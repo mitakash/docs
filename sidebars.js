@@ -19,6 +19,7 @@ module.exports = {
       "trade-overview",
       "trade-dfr",
       "trade-methods",
+      "trade-frontrunning",
       // "trade-user-tutorial",
       // "trade-bot-tutorial"
     ],
