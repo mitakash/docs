@@ -4,15 +4,13 @@ title: Liquidity Provider Overview
 sidebar_label: Overview
 ---
 
-___
+---
 
 ### Liquidity Providers
 
-Similarly to Uniswap, Futureswap is powered by liquidity providers. Every futures liquidity pool holds reserves of DAI and another ERC20 token. Liquidity providers are not buying a token like on a traditional exchange; instead, they are contributing to the specific pair’s pool. The assets deposited are added to the larger pool for that pair. An internal token that represents relative ownership to the liquidity pool’s assets is issued to liquidity providers.
+Like Uniswap, Futureswap is powered by liquidity providers. Every Futureswap liquidity exchange holds reserves of a stable token (ex: DAI) and another ERC20 token (ex: wrapped ETH). To become a liquidity provider you are required to deposit equal value amounts of the exchanges stable and asset tokens. You are then minted transferable liquidity tokens which represent your ownership to that liquidity pool. If you own 10 liquidity tokens and there are 100 outstanding you own 10/100 = 10% of the tokens in the asset and stable pools.
 
-Automated market making means that Futureswap’s liquidity providers initially take the other side of an unmatched futures position. This risk of loss is detrimental to Futureswap’s liquidity pools being seen as a safe haven for earning low-risk interest. To mitigate drastic imbalances between position volumes, an increasing fee is charged to the more popular side. As the disparity between shorts and longs grows the over-represented side is disincentivized by paying an increasing fee to the less popular side. We call this the Dynamic Funding Rate.
-
-
+Automated market making means that Futureswap's liquidity providers may initially take the other side of an unmatched futures position. An example of this would be a brand new exchange where there are zero open trades. If a $100 long is open then there is $100 of longs and $0 of shorts. The liquidity providers are covering the $100 long position effectively making them short the asset temporarily.
 
 ### Adding Liquidity
 
@@ -44,6 +42,7 @@ As well add any funds to DSR will get called if funds are not in the DSR and the
 ### Liquidity Example
 
 #### Example
+
 The liquidity pool for a Futureswap ETH/DAI exchange already has $100 of ETH and $100 of DAI in it.
 There are 100 liquidity tokens (LT) outstanding.
 Alice adds $25 of ETH and $25 of DAI to the exchange for a sum of $100 in value.

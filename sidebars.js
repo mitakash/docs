@@ -13,48 +13,48 @@ module.exports = {
       "howItWorks",
       "privacyAndDecentralization",
       "supportedTokens",
-      "deployedContracts"
+      "deployedContracts",
     ],
-    'Trader': [
+    Trader: [
       "trade-overview",
-      "trade-dfr",    
-      "trade-methods",              
-      "trade-user-tutorial",
-      "trade-bot-tutorial"
+      "trade-dfr",
+      "trade-methods",
+      // "trade-user-tutorial",
+      // "trade-bot-tutorial"
     ],
     "Liquidity Provider": [
       "liquidity-provider-overview",
-      "liquidity-provider-events",
-      "liquidity-provider-user-tutorial"
+      "liquidity-provider-risks",
+      // "liquidity-provider-user-tutorial",
     ],
     Liquidation: [
       "liquidation-overview",
-      "liquidation-events",
-      "liquidation-user-tutorial",
-      "liquidation-bot-tutorial"
+      // "liquidation-events",
+      // "liquidation-user-tutorial",
+      // "liquidation-bot-tutorial",
     ],
     "FST (Futureswap Tokens) ": [
       "fst-overview",
       "fst-incentives",
-      "fst-events",
-      "fst-voting"
+      // "fst-events",
+      // "fst-voting",
     ],
-    "Old docs": [
-      "dynamicFundingRate",
-      "events",
-      "exchangeFactory",
-      "fsToken",
-      "incentives",
-      "liquidation",
-      "index",
-      "liquidityTokenFactory",
-      "liquidityToken",
-      "oracle",
-      "providingLiquidity",
-      "tradeManagement",
-      "trading",
-      "voting"
-    ],
+    // "Old docs": [
+    //   "dynamicFundingRate",
+    //   "events",
+    //   "exchangeFactory",
+    //   "fsToken",
+    //   "incentives",
+    //   "liquidation",
+    //   "index",
+    //   "liquidityTokenFactory",
+    //   "liquidityToken",
+    //   "oracle",
+    //   "providingLiquidity",
+    //   "tradeManagement",
+    //   "trading",
+    //   "voting",
+    // ],
     // Features: ["mdx", "doc1", "doc2"]
-  }
-}
+  },
+};

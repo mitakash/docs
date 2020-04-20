@@ -70,11 +70,11 @@ Alice enters a position of 10 DAI and selects 10x leverage to go long on 1 ETH.
 
 The contract takes 1 ETH out of the liquidity pool and marks it as reserved for Alice. At this point, Alice has added 10 DAI as collateral and has a position size of 1 ETH.
 
-#### ETH goes up 📈
+#### ETH goes up 🚀
 
 1. Alice closes her long position at \$105.
 1. \$100 worth of ETH (0.95238 ETH) is returned to the liquidity pool.
-1. \$5 worth of ETH (0.0476 ETH) is paid out to Alice as her profit along with her initial 10 DAI of collateral.
+1. \$5 worth of ETH (0.0476 ETH) is paid out to Alice (in DAI) as her profit along with her initial 10 DAI of collateral.
 1. The ETH pool still has the same value of ETH and has made fees off of the trade.
 1. Price increase while long on ETH.
 
@@ -84,9 +84,8 @@ The contract takes 1 ETH out of the liquidity pool and marks it as reserved for 
 
 1. Alice closes her long position at \$95.
 1. \$95 worth of ETH (1 ETH) is returned to the liquidity pool.
-1. \$5 worth of Alice’s collateral is converted to ETH to pay back the liquidity pool for her loss via a Uniswap-like pool.
+1. \$5 worth of Alice’s collateral is converted to ETH to pay back the liquidity pool for her loss via Futureswap's Internal Exchange.
 1. Alice’s remaining \$5 in collateral is sent back to her.
-1. The ETH pool still has the same value of ETH and has made fees off of the trade.
-1. Price decrease while long on ETH.
+1. The ETH pool still has the same value of ETH (although the price of ETH declined) and has made fees off of the trade.
 
 ![alt text](/img/eth_go_down.png "eth_go_down")

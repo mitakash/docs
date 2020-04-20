@@ -6,9 +6,11 @@ sidebar_label: Welcome
 
 ---
 
-Futureswap is a protocol for futures trading on ethereum. 
+Futureswap is a protocol for perpetual futures trading on Ethereum.
 
-Our main goal is to create an ecosystem focused on creating a decentralized trading platform that is community organized and lead. We encourage developers to build on top of Futureswap to achieve their DeFi goals.
+Futureswap is a decentralized exchange that allows traders to enter into perpetual futures with up to 20x leverage while liquidity providers can earn fees and interest. The platform is governed by the community, which is powered by an underlying governance (FST) token that allows anyone to propose new exchanges or changes in the system.
+
+Our goal was to take the best parts of centralized exchanges and the necessary parts of decentralized governance to merge it into a system that is self-governed and aligned on a common goal.
 
 Key advantages of Futureswap:
 
@@ -18,4 +20,3 @@ Key advantages of Futureswap:
 1. LP returns
 1. Community governed (pairs, fees, leverage cap, liquidation reward, and more).
 1. Futureswap Token (FST)
-

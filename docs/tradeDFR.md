@@ -8,7 +8,9 @@ sidebar_label: Dynamic Funding Rate
 
 ### Concept
 
-The dynamic funding rate (DFR) is a mechanism of the Futureswap system that aims to keep the long and short open volumes balanced. Futureswap relies on the volume of open longs and open shorts to be relatively balanced for the majority of the time. There will be deviations where the pools are very imbalanced due to large trades or spikes in volatility but this will impact the funding rate which in turn incentivizes more volume on the less popular side. In solidity charging a DFR to every single trade would be impractical so what Futureswap instead does is pools open long volumes and open short volume into two pools. Then since the DFR is supposed to be charged to all longs or shorts equally funds are moved from one of the pools to the next. When a trade is opened the underlying asset is deposited into the appropriate pool and the trader is issued their appropriate share ownership to that pool.
+The dynamic funding rate (DFR) is a mechanism of the Futureswap system that aims to keep the long and short open volumes balanced. Futureswap relies on the volume of open longs and open shorts to be relatively balanced for the majority of the time. There will be deviations where the pools are very imbalanced due to large trades or spikes in volatility but this will impact the funding rate which in turn incentivizes more volume on the less popular side.
+
+In solidity charging a DFR to every single trade would be impractical so what Futureswap instead does is pools open long volumes and open short volume into two pools. Then since the DFR is supposed to be charged to all longs or shorts equally funds are moved from one of the pools to the next. When a trade is opened the underlying asset is deposited into the appropriate pool and the trader is issued their appropriate share ownership to that pool.
 
 ### Definition
 
@@ -18,6 +20,12 @@ The DFR is a % fee on the total trade size. The fee is based on an 8 hour period
 
 If the DFR was at +0.01% that means that every 8 hours the longs would be paying the shorts 0.01%
 If the DFR was at -0.23% that means that every 8 hours the shorts would be paying the longs 0.23%
+
+### How the DFR is Calculated:
+
+Traditional Funding Rates are charged in a single event at the end of every 8 hours. Futureswap's Dynamic Funding Rate differs in this regard. The DFR is calculated and charged on a per-second used basis. If 10 minutes have passed since the last trade open or close then 600 seconds (10 \* 60 = 600 seconds) worth of the full 8 hour (28,800 seconds) fee would be charged/earned to/by open trades. In this example, 600/28,800 = ~2% of the full 8 hour DFR would be incurred.
+
+The DFR scales Dynamically based on the pool usages and imbalance. If there is 0.5% more long trades than shorts then the DFR will be near 0% but as the imbalance grows then so does the DFR. The DFR has an exponential curve with a modifiable divisor to reduce the rate (divisor explained later).
 
 ### Calculations
 
@@ -55,3 +63,7 @@ Storage.DynamicFunding
 Storage.Trade
 
 redeemShares returns the value of the shares for the specific trade.
+
+### Summary
+
+The Dynamic Funding Rate maintains the balance between long and short volumes by having the more in demand-side pay the less in demand-side a time fee. We envision this being arbitraged to maintain relative balance between longs and shorts. If one side is paying the other a higher fee than on other platforms then there is a profitable opportunity for arbitragers.
