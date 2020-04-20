@@ -10,6 +10,7 @@ module.exports = {
     "Getting Started": [
       // "example",
       "welcome",
+      "alpha",
       "howItWorks",
       "privacyAndDecentralization",
       "supportedTokens",
