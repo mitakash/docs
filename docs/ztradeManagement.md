@@ -72,7 +72,7 @@ Logged Events
   - tradeId -> Id of trade made
   - timestamp -> When the trade was made
 
-## Initation Fee
+## Initiation Fee
 
 - Each trade requires an initiation fee to be made. These fees act as payment to the liquidity providers.
 - The initFee is subject to change and is stored in
