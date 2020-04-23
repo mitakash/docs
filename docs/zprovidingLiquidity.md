@@ -24,7 +24,7 @@ tokensToBurn
 
 The address that sends this request must own liquidity tokens and those tokens will be burnt for withdrawing.
 
-This requires the amount is not being currently utalized. It gets the balance of the available liquidity of the tokens in the pool and then multiplies it by how much of the liquidity tokens you own.
+This requires the amount is not being currently utilized. It gets the balance of the available liquidity of the tokens in the pool and then multiplies it by how much of the liquidity tokens you own.
 
 If the DAI is in the DSR it removes it, if the token is Weth it unwraps it.
 
